@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <wenyang></wenyang>
+    </div>
+
+    <script>
+        Vue.component('wenyang', {
+            template: '<div style="color: red">全局化注册的wenyang标签</div>'
+        })
+        var app = new Vue({
+          el: '#app',
+          data: {}
+        })
+    </script>
+</body>
+</html>

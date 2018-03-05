@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>set API</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="aa in arr">{{aa}}</li>
+        </ul>
+    </div>
+    <button onclick="add()">外部添加</button>
+
+    <script>
+        function add() {
+          console.log('我已经执行了')
+//          app.arr[1] = 'ddd'
+          Vue.set(app.arr, 3, 'ddd')
+        }
+        var outData = {
+          arr: ['aaa', 'bbb', 'ccc']
+        }
+        var app = new Vue({
+          el: '#app',
+          data: outData
+        })
+    </script>
+</body>
+</html>
